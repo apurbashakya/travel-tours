@@ -2,7 +2,7 @@ import React from 'react';
 import { feedbackData } from '@/app/StaticData';
 
 const FeedbackSection = () => {
-  const renderStars = (rating:any) => {
+  const renderStars = (rating:number) => {
     const stars = [];
     for (let i = 0; i < 5; i++) {
       stars.push(

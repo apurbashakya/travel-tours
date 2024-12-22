@@ -6,7 +6,7 @@ const SearchBar = () => {
   const [destination, setDestination] = useState("");
   const [date, setDate] = useState("");
   const [isDateFocused, setIsDateFocused] = useState(false);
-  const [suggestions, setSuggestions] = useState<String[]>();
+  const [suggestions, setSuggestions] = useState<string[]>();
   const [showDropdown, setShowDropdown] = useState(false);
 
   // Local recommendation list
@@ -21,7 +21,7 @@ const SearchBar = () => {
   ];
 
   // Handle destination input change
-  const handleDestinationChange = (e:any) => {
+  const handleDestinationChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const input = e.target.value;
     setDestination(input);
 
@@ -38,7 +38,7 @@ const SearchBar = () => {
   };
 
   // Select recommendation
-  const selectRecommendation = (item:any) => {
+  const selectRecommendation = (item:string) => {
     setDestination(item);
     setShowDropdown(false);
   };
