@@ -15,7 +15,7 @@ export default function Hero() {
             Discover Your Next Adventure
           </h1>
           <p className="text-xl md:text-2xl text-white">
-            Explore the world's most beautiful destinations
+            Explore the most beautiful destinations
           </p>
           <SearchBar/>
       </div>

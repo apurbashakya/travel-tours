@@ -6,7 +6,7 @@ const SearchBar = () => {
   const [destination, setDestination] = useState("");
   const [date, setDate] = useState("");
   const [isDateFocused, setIsDateFocused] = useState(false);
-  const [suggestions, setSuggestions] = useState([]);
+  const [suggestions, setSuggestions] = useState<String[]>();
   const [showDropdown, setShowDropdown] = useState(false);
 
   // Local recommendation list
@@ -21,7 +21,7 @@ const SearchBar = () => {
   ];
 
   // Handle destination input change
-  const handleDestinationChange = (e) => {
+  const handleDestinationChange = (e:any) => {
     const input = e.target.value;
     setDestination(input);
 
@@ -38,7 +38,7 @@ const SearchBar = () => {
   };
 
   // Select recommendation
-  const selectRecommendation = (item) => {
+  const selectRecommendation = (item:any) => {
     setDestination(item);
     setShowDropdown(false);
   };
@@ -69,7 +69,7 @@ const SearchBar = () => {
             {/* Dropdown Suggestions */}
             {showDropdown && (
               <ul className="absolute bg-white shadow-md mt-1 rounded-md w-full z-10">
-                {suggestions.map((item, index) => (
+                {suggestions?.map((item, index) => (
                   <li
                     key={index}
                     onClick={() => selectRecommendation(item)}

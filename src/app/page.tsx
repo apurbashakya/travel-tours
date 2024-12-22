@@ -1,7 +1,6 @@
 import Header from '../components/Header'
 import Hero from '../components/Hero'
 import FeaturedDestinations from '../components/FeaturedDestinations'
-import SearchBar from '../components/SearchBar'
 import Offer from '../components/Offer';
 import Footer from '@/components/Footer';
 import FeedbackSection  from '@/components/Recommendation'
